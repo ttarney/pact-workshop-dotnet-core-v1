@@ -1,8 +1,10 @@
+using Consumer;
 using consumerUT.Support;
 using PactNet.Mocks.MockHttpService;
 using System;
 using System.Collections.Generic;
 using Xunit;
+using Shouldly;
 
 namespace consumerUT
 {
@@ -47,6 +49,12 @@ namespace consumerUT
                                 message = invalidRequestMessage
                             }
                         });
+
+            var result = ConsumerApiClient.ValidateDateTimeUsingProviderApi("lolz", _mockProviderServiceBaseUri).GetAwaiter().GetResult();
+            var resultBodyText = result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            resultBodyText.ShouldContain(invalidRequestMessage);
+            // Assert
+            //Assert.Contains(invalidRequestMessage, resultBodyText);
         }
     }
 

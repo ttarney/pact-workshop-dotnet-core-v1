@@ -34,8 +34,8 @@ namespace consumerUT.Support
 
             PactBuilder = new PactBuilder(pactConfig);
 
-            PactBuilder.ServiceConsumer("Consumer")
-                .HasPactWith("Provider");
+            PactBuilder.ServiceConsumer("Consumer1")
+                .HasPactWith("Provider2");
 
             MockProviderService = PactBuilder.MockService(MockServerPort);
         }

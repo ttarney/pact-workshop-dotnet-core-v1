@@ -1,3 +1,7 @@
 .vscode/
 bin/
 obj/
+/.vs
+/YourSolution/PactWorkshop/.vs/PactWorkshop/DesignTimeBuild
+/YourSolution/PactWorkshop/.vs/PactWorkshop/v15/Server/sqlite3
+/YourSolution/PactWorkshop/.vs/PactWorkshop/v15/.suo
